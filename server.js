@@ -9,7 +9,7 @@ const express = require('express');
 
 //contorllers
 const usersRouter = require('./controllers/users');
-
+const meetups = require('./controllers/meetups');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -20,6 +20,7 @@ app.use(express.json());
 
 // Routes
 app.use('/users', usersRouter);
+app.use('/meetups', meetups);
 
 app.listen(PORT, () => {
   console.log('The express app is ready!');
