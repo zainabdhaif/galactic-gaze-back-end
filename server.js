@@ -9,6 +9,7 @@ const express = require('express');
 
 //contorllers
 const usersRouter = require('./controllers/users');
+const eventsRouter = require('./controllers/events.js');
 
 
 const app = express();
@@ -20,6 +21,7 @@ app.use(express.json());
 
 // Routes
 app.use('/users', usersRouter);
+app.use('/events', eventsRouter);
 
 app.listen(PORT, () => {
   console.log('The express app is ready!');
