@@ -10,6 +10,8 @@ const express = require('express');
 //contorllers
 const usersRouter = require('./controllers/users');
 const observationsRouter = require('./controllers/observations');
+const eventsRouter = require('./controllers/events.js');
+
 
 
 const app = express();
@@ -22,6 +24,7 @@ app.use(express.json());
 // Routes
 app.use('/users', usersRouter);
 app.use('/observations', observationsRouter);
+app.use('/events', eventsRouter);
 
 app.listen(PORT, () => {
   console.log('The express app is ready!');
