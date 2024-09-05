@@ -9,7 +9,11 @@ const express = require('express');
 
 //contorllers
 const usersRouter = require('./controllers/users');
+const meetups = require('./controllers/meetups');
+const observationsRouter = require('./controllers/observations');
+const eventsRouter = require('./controllers/events.js');
 const bookingsRouter = require ('./controllers/bookings')
+
 
 
 const app = express();
@@ -19,8 +23,12 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 
+
 // Routes
 app.use('/users', usersRouter);
+app.use('/meetups', meetups);
+app.use('/observations', observationsRouter);
+app.use('/events', eventsRouter);
 app.use('/bookings',bookingsRouter)
 
 app.listen(PORT, () => {
