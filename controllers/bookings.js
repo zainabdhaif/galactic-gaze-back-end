@@ -7,45 +7,6 @@ const User = require ('../models/user.js');
 const Meetup = require ('../models/meetup.js');
 const Booking = require ('../models/booking.js');
 
-// const Event = require('../models/event.js')
-// async function insertMockEvent() {
-//     try {
-//         const event = new Event({
-//             name: 'Test2',
-//             description: 'This is a description of the sample event.',
-//             datetime: new Date('2024-10-01T10:00:00Z'),
-//             location: '123 Sample Street, Sample City, SC',
-//             coordinates: '40.7128,-74.0060',
-//             image: 'http://example.com/sample-image.jpg',
-//             observations: [],
-
-//         });
-//         await event.save();
-//         console.log('Mock event inserted successfully.');
-//     } catch (error) {
-//         console.error('Error inserting mock event:', error);
-//     }
-// }
-// insertMockEvent();
-
-// async function insertMockMeetup() {
-//     try{
-//         const meetup = new Meetup({
-//             userid: '66d99b16a895b918a980acd9',
-//             eventid: '66d9a0518e77fb7d1af65332',
-//             location:'On Mars, woo hooooo',
-//             image: 'http://example.com/sample-image.jpg',
-//             bookings: []
-//         })
-//         await meetup.save();
-//         console.log('Mock event inserted successfully.');
-//     } catch (error) {
-//         console.error('Error inserting mock event:', error);
-//     }
-// }
-
-// insertMockMeetup();
-
 router.use(verifyToken, isUser);
 
 //create a new booking

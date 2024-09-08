@@ -5,6 +5,7 @@ const verifyToken = require('../middleware/verify-token.js');
 const isClub = require('../middleware/is-club')
 const Meetup = require('../models/meetup.js')
 const Event = require('../models/event.js')
+const User = require('../models/user');
 
 // DELETE LATER
 // async function insertMockEvent() {
@@ -50,12 +51,17 @@ router.post('/', async (req, res) => {
     try {
         const { eventid, location } = req.body
         const event = await Event.findById(eventid);
+        const Usser = await User.findById(req.user.id);
         const meetup = await Meetup.create({
             userid: req.user.id,
             eventid,
             location,
             image: event.image
         })
+        event.meetups.push(meetup._id);
+        await event.save();
+        Usser.meetups.push(meetup._id);
+        await Usser.save();
         res.status(201).json(meetup);
     } catch (error) {
         res.status(500).json(error);
