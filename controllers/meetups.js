@@ -29,7 +29,7 @@ const User = require('../models/user');
 
 router.get('/', async (req, res) => {
     try {
-        const meetups = await Meetup.find();
+        const meetups = await Meetup.find().populate('eventid').populate('userid');
         res.status(200).json(meetups);
     } catch (error) {
         res.status(500).json(error);
@@ -38,7 +38,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:meetupID', async (req, res) => {
     try {
-        const meetup = await Meetup.findById(req.params.meetupID);
+        const meetup = await Meetup.findById(req.params.meetupID).populate('eventid').populate('userid');
         res.status(200).json(meetup);
     } catch (error) {
         res.status(500).json(error);
