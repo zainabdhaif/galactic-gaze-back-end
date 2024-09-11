@@ -6,9 +6,6 @@ const Observation = require('../models/observation');
 const User = require('../models/user');
 const Event = require('../models/event');
 
-
-// router.use(verifyToken, isUser);
-
 // obs create
 router.post('/',verifyToken, isUser ,async (req, res) =>{
     try{
