@@ -38,9 +38,6 @@ The project plan can be viewed [here](https://trello.com/b/Pc8wrc7b).
 
 ## Screenshots
 
-<p align="center">
-<img src="public/screenshots/homepage.png" alt="drawing" width="800" height="400"/>
-</p>
 
 <p align="center">
 <img src="public/screenshots/home.png" alt="home" width="800" height="400"/>
