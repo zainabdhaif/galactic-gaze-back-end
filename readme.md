@@ -56,8 +56,8 @@ The project plan can be viewed [here](https://trello.com/b/Pc8wrc7b).
 </p>
 
 
-## Backend Repository Link
-The backend repository can be viewed [here](https://github.com/zainabdhaif/galactic-gaze-front-end.git).
+## Frontend Repository Link
+The frontend repository can be viewed [here](https://github.com/zainabdhaif/galactic-gaze-front-end.git).
 
 ## Credits
 ### React + Vite
