@@ -55,6 +55,9 @@ The project plan can be viewed [here](https://trello.com/b/Pc8wrc7b).
 <img src="public/screenshots/meetups.png" alt="meetups" width="800" height="400"/>
 </p>
 
+## Deployed Link
+
+The deployed webstie can be viewed [here](https://galactic-gaze-front-end.vercel.app/)
 
 ## Frontend Repository Link
 The frontend repository can be viewed [here](https://github.com/zainabdhaif/galactic-gaze-front-end.git).
